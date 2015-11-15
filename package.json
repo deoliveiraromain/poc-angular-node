@@ -1,0 +1,16 @@
+{
+  "name": "media-Gallery",
+  "description" : "Gallery WebSite for pictures, Movie Streaming, Sound listening... ",
+  "version": "0.0.1",
+  "private": true,
+  "author" : "Romain De Oliveira",
+  "main" : "server.js",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "express": "~4.13.1",
+    "mongoose"   : "~4.2.5",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0",
+    "method-override": "~2.1.2"
+  }
+}
