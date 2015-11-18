@@ -10,15 +10,21 @@ var morgan = require('morgan');             // log requests to the console (expr
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
+var db = require('./config/db');
+var routes = require('./routes/routes');
+
+var port = process.env.PORT || 8080;
+
 
 var app = express();
-
 
 // configuration =================
 
 //mongoose.connect('mongodb://node:nodeuser@mongo.onmodulus.net:27017/uwO3mypu');     // connect to mongoDB database on modulus.io
 
-mongoose.connect('mongodb://localhost/mediaGallery')
+mongoose.connect(db.url);
+routes(app);
+
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 //app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
@@ -29,6 +35,8 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
+
+
 // listen (start app with node server.js) ======================================
-app.listen(8080);
+app.listen(port);
 console.log("App listening on port 8080");
