@@ -2,7 +2,7 @@
  * Created by Romain on 18/11/2015.
  */
 
-var routes = require('./index');
+var index = require('./index');
 var pictures = require('./pictures');
 var movies = require('./movies');
 var music = require('./music');
@@ -13,5 +13,5 @@ module.exports= function(app){
     app.use('/mediaGallery/music', music);
 
 
-    app.use('/mediaGallery', routes);
+    app.use('/mediaGallery', index);
 };

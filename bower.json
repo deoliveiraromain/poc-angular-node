@@ -1,5 +1,5 @@
 {
-  "name": "starter-node-angular",
+  "name": "media-Gallery",
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "latest",
