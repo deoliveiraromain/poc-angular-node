@@ -10,5 +10,7 @@ Technos : MongoDB / NodeJS / Bootstrap / Angular JS
 Pour tester la version en cours : (nécéssite NodeJS et MongoDB démarré avec une DB 'mediaGallery') 
 
 $ npm install
+
 $ bower install
-$ npm server.js
+
+$ node server.js
