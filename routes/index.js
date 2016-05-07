@@ -6,8 +6,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('*', function(req, res, next) {
-    //res.render('index', { title: 'Express' });
-    res.sendFile('./public/views/index.html');
+    console.log("Index requested");
+   // res.sendFile('./public/index.html');
+   // res.sendFile("/index.html", {"root": './public'});
+    //console.log(router.get('appPath'));
+    res.sendFile(router.get('appPath') + '/index.html');
 });
 
 module.exports = router;

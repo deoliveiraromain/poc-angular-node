@@ -1,8 +1,7 @@
 /**
  * Created by Romain on 22/11/2015.
  */
-angular.module('MainCtrl', []).controller('MainController', function($scope) {
-
+var mainModule = angular.module('MainCtrl', []);
+mainModule.controller('MainCtrl', function($scope) {
     $scope.tagline = 'To the moon and back!';
-
 });

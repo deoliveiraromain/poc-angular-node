@@ -7,11 +7,9 @@ var pictures = require('./pictures');
 var movies = require('./movies');
 var music = require('./music');
 
-module.exports= function(app){
-    app.use('/mediaGallery/pictures', pictures);
-    app.use('/mediaGallery/movies', movies);
-    app.use('/mediaGallery/music', music);
-
-
-    app.use('/mediaGallery', index);
+module.exports = function (app) {
+    app.use('/pictures', pictures);
+    app.use('/movies', movies);
+    app.use('/music', music);
+    app.use('*', index);
 };

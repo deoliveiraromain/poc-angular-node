@@ -23,6 +23,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         controller: 'MusicCtrl'
     });
 
+    $routeProvider.otherwise({
+        redirectTo: '/'
+    });
+
     $locationProvider.html5Mode(true);
 
 }]);
