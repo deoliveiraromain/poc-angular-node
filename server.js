@@ -22,7 +22,7 @@ var app = express();
 
 //mongoose.connect('mongodb://node:nodeuser@mongo.onmodulus.net:27017/uwO3mypu');     // connect to mongoDB database on modulus.io
 
-mongoose.connect(db.url);
+//mongoose.connect(db.url);
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 //app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users

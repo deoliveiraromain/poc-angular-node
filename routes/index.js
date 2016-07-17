@@ -9,8 +9,10 @@ router.get('*', function(req, res, next) {
     console.log("Index requested");
    // res.sendFile('./public/index.html');
    // res.sendFile("/index.html", {"root": './public'});
-    //console.log(router.get('appPath'));
-    res.sendFile(router.get('appPath') + '/index.html');
+    console.log(router.get('appPath'));
+    console.log("dirname : " + __dirname);
+    res.sendFile('/index.html', { root: './public'});
+    //res.sendFile(router.get('appPath') + '/index.html');
 });
 
 module.exports = router;
